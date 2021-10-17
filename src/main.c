@@ -1,4 +1,3 @@
-#include "modes.h"
 #include "serial.h"
 #include "schedule.h"
 #include "state.h"
@@ -16,12 +15,8 @@ void init_peripherals();
 
 int main(void) {
 
-
-  int pot_val = 0, pot_in = 0;
-
   init_timer();
   init_peripherals();
-
   init_shell();
 
 
@@ -34,10 +29,14 @@ int main(void) {
     if(state_get() == STOPPED)
       continue;
     
+    /*
+    * Check for actions and events then push those
+    * events onto the state queue.
+    */
     schedule_update();
-
     check_peripherals();
 
+    // process all events pushed onto the queue
     state_update();
   }
 }
