@@ -22,30 +22,21 @@ static void init_adc() {
 static uint32_t adc_read(uint8_t ch)
 {
     if(!adc_initiated) init_adc();
-  // select the corresponding channel 0~7
-  // ANDing with ’7′ will always keep the value
-  // of ‘ch’ between 0 and 7
-  ch &= 0b00000111;  // AND operation with 7
-  ADMUX = (ADMUX & 0xF8)|ch; // clears the bottom 3 bits before ORing
- 
-  // start single convertion
-  // write ’1′ to ADSC
-  ADCSRA |= (1<<ADSC);
- 
-  // wait for conversion to complete
-  // ADSC becomes ’0′ again
-  // till then, run loop continuously
-  while(ADCSRA & (1<<ADSC));
- 
-  return (ADC);
-}
 
-uint32_t read_pot() {
-    return adc_read(POT_PIN);
+    ch &= 0b00000111;  // AND operation with 7
+    ADMUX = (ADMUX & 0xF8)|ch; // clears the bottom 3 bits
+ 
+    // start single conversion
+    ADCSRA |= (1<<ADSC);
+ 
+    // wait for conversion to complete
+    while(ADCSRA & (1<<ADSC));
+ 
+    return (ADC);
 }
 void pot_update() {
     // read potentiometer
-    pot_in = read_pot();
+    pot_in = adc_read(POT_PIN);
 
     // if current and last difference greater than 5
     if(abs(pot_in - pot_val) > 5) {

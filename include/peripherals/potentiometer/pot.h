@@ -5,7 +5,6 @@
 
 #define abs(a) (a > 0 ? a : -(a))
 
-uint32_t read_pot();
 uint32_t pot_get();
 void pot_update();
 
