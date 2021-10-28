@@ -2,6 +2,18 @@
 
 Arduino Uno with a shield extension attached, containing an RGB diode controlled by switches, rotary encoder and UART terminal.  
 
+## Contents
+
+1. [Scheduling & Task Management](https://github.com/Conhan93/Disco-Shield#scheduling--task-management)
+    1. [Scheduler](https://github.com/Conhan93/Disco-Shield#scheduler)
+    2. [Task Management & State Machine](https://github.com/Conhan93/Disco-Shield#task-queue--event-machine)
+3. [Peripherals](https://github.com/Conhan93/Disco-Shield#peripherals)
+    1. [RGB](https://github.com/Conhan93/Disco-Shield#rgb-diode)
+    2. [Switches/Buttons](https://github.com/Conhan93/Disco-Shield#switches)
+    3. [Encoder](https://github.com/Conhan93/Disco-Shield#rotary-encoder)
+4. [Libs](https://github.com/Conhan93/Disco-Shield#libs)
+5. [BOM](https://github.com/Conhan93/Disco-Shield#bom)
+
 
 ## Scheduling & Task Management
 -----
@@ -166,10 +178,10 @@ The timer implementation was proudly stolen from the Arduino source code.
 
 ## BOM
 ----
-- 1 [Rotary Encoder](../Meta/Shield/../../Disco%20Shield/Meta/Shield/Shield%20Components/COM-09806_Web.pdf)
-- 2 [Switches](../Disco%20Shield/Meta/Shield/Shield%20Components/en-b3f.pdf)
--  [Resistors](../Disco%20Shield/Meta/Shield/Shield%20Components/PYu-RC_Group_51_RoHS_L_11.pdf)
+- 1 [Rotary Encoder](https://github.com/Conhan93/Disco-Shield/blob/main/Meta/Shield/Shield%20Components/COM-09806_Web.pdf)
+- 2 [Switches](https://github.com/Conhan93/Disco-Shield/blob/main/Meta/Shield/Shield%20Components/en-b3f.pdf)
+-  [Resistors](https://github.com/Conhan93/Disco-Shield/blob/main/Meta/Shield/Shield%20Components/PYu-RC_Group_51_RoHS_L_11.pdf)
     - 2 200 ohm
     - 1 300 ohm
     - 2 1k ohm
-  - [RGB Led with common anode](Meta/Shield/Shield%20Components/YSL-R596AR3G4B5C-C10.pdf)
+  - [RGB Led with common anode](https://github.com/Conhan93/Disco-Shield/blob/main/Meta/Shield/Shield%20Components/YSL-R596AR3G4B5C-C10.pdf)
