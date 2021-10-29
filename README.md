@@ -57,7 +57,7 @@ Arduino Uno with a shield extension attached, containing an RGB diode controlled
     }
     ```
 
-    This is done to promote looser coupling between the an action or calling of a state change and the execution.
+    This is done to promote looser coupling between an action or calling of a state change and the execution.
 
     The task queue is popped and processed at the end of the main loop in an event centric state machine, where instead the machine is event driven. With the task queue feeding events to the state machine, Which is executing those tasks.
 
@@ -185,3 +185,9 @@ The timer implementation was proudly stolen from the Arduino source code.
     - 1 300 ohm
     - 2 1k ohm
   - [RGB Led with common anode](https://github.com/Conhan93/Disco-Shield/blob/main/Meta/Shield/Shield%20Components/YSL-R596AR3G4B5C-C10.pdf)
+
+## Schematic and Shield
+-----
+![Shield Image](https://github.com/Conhan93/Disco-Shield/blob/main/Meta/Shield/Labb3Kretskort.png)
+
+A simple [Schematic](https://github.com/Conhan93/Disco-Shield/blob/main/Meta/Shield/Schematic.pdf) for the shield, drawn in Kicad.
